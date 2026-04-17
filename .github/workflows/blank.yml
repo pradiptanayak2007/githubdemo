@@ -4,8 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  job_Hello:
+  DevDeployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello steps
-        run: echo "Hello from Github"
+      - name: Deployment to Dev In Progress
+        run: echo "Dev deployment in progres"
+  TestDeployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test deployment steps
+        run: echo "Test deployment in progres"
