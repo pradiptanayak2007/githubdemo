@@ -1,0 +1,16 @@
+name: Triggered from Power Automate
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment name"
+        required: true
+        default: "dev"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo input
+        run: echo "Triggered for environment ${{ github.event.inputs.environment }}"
